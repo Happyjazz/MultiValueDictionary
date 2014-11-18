@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>363de982-2cc9-42ed-91d8-d4c27f50901c</ProjectGuid>
+    <ProjectGuid>{1E3664CC-3313-4F6F-8CA7-96FA47FCDCCD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>TestMultiValueDictionary</RootNamespace>
@@ -52,6 +52,12 @@
   <ItemGroup>
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MultiValueDictionary\MultiValueDictionary.csproj">
+      <Project>{8335314d-5cce-49de-b039-3b9617f956f1}</Project>
+      <Name>MultiValueDictionary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
