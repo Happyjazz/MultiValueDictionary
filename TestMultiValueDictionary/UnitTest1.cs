@@ -62,5 +62,19 @@ namespace TestMultiValueDictionary
 
             Assert.IsTrue(mvd.Remove(key, value));
         }
+
+        [TestMethod]
+        public void F_TestKeys()
+        {
+            mvd = new MultiValueDictionary<string, string>();
+            String key = "SomeMovie";
+            String value = "192.12.33.4";
+            mvd.Add(key, value);
+            key = "AnotherMovie";
+            value = "185.3.2.3";
+            mvd.Add(key, value);
+
+            ICollection<String> keys = mvd.Keys;
+        }
     }
 }

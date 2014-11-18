@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,11 @@ namespace MultiValueDictionary
         public int Count
         {
             get { return _data.Count; }
+        }
+
+        public ICollection<TKey> Keys
+        {
+            get { return _data.Keys; }
         }
 
         public bool Add(TKey key, TValue value)
