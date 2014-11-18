@@ -45,5 +45,31 @@ namespace MultiValueDictionary
             }
             throw new Exception("Key not found");
         }
+
+        public bool ContainsKey(TKey key)
+        {
+            if (_data.ContainsKey(key))
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public bool Remove(TKey key, TValue value)
+        {
+            if (_data.ContainsKey(key))
+            {
+                if (_data[key].Contains(value))
+                {
+                    _data[key].Remove(value);
+                    if (_data[key].Count==0)
+                    {
+                        _data.Remove(key);
+                    }
+                    return true;
+                }
+            }
+            return false;
+        }
     }
 }
